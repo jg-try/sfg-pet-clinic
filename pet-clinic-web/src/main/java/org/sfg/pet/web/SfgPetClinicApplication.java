@@ -1,4 +1,4 @@
-package com.jgt.sfgpetclinic;
+package org.sfg.pet.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
