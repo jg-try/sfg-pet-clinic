@@ -1,4 +1,4 @@
-package com.jgt.sfgpetclinic.model;
+package com.pet.model;
 
 import java.io.Serializable;
 

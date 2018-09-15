@@ -1,15 +1,15 @@
-package org.sfg.pet.web.bootstrap;
+package com.pet.web.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.jgt.sfgpetclinic.model.Owner;
-import com.jgt.sfgpetclinic.model.Pet;
-import com.jgt.sfgpetclinic.model.Vet;
-import com.jgt.sfgpetclinic.services.OwnerService;
-import com.jgt.sfgpetclinic.services.VetService;
-import com.jgt.sfgpetclinic.services.map.OwnerServiceMap;
-import com.jgt.sfgpetclinic.services.map.VetServiceMap;
+import com.pet.model.Owner;
+import com.pet.model.Pet;
+import com.pet.model.Vet;
+import com.pet.services.OwnerService;
+import com.pet.services.VetService;
+import com.pet.services.map.OwnerServiceMap;
+import com.pet.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -17,9 +17,9 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override
@@ -40,7 +40,6 @@ public class DataLoader implements CommandLineRunner {
 
 		System.out.println("Loaded Owners....");
 
-		
 		Vet vet1 = new Vet();
 		vet1.setFirstName("Sam");
 		vet1.setLastName("Axe");

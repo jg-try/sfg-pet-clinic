@@ -1,6 +1,6 @@
-package com.jgt.sfgpetclinic.services;
+package com.pet.services;
 
-import com.jgt.sfgpetclinic.model.Owner;
+import com.pet.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 	
